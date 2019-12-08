@@ -1,12 +1,13 @@
-FROM alpine:latest
+FROM arm32v7/alpine:latest
 
-LABEL maintainer "Marvin Steadfast <marvin@xsteadfastx.org>"
+RUN [ “cross-build-start” ]
 
 ARG WALLABAG_VERSION=2.3.8
 
 RUN apk add gnu-libiconv --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ --allow-untrusted
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
+# dependencies
 RUN set -ex \
  && apk update \
  && apk upgrade --available \
@@ -67,3 +68,4 @@ RUN set -ex \
 EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["wallabag"]
+RUN [ “cross-build-end” ]
