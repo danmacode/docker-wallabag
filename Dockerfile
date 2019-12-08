@@ -57,6 +57,7 @@ RUN set -ex \
  && curl -s https://getcomposer.org/installer | php \
  && mv composer.phar /usr/local/bin/composer \
  && git clone --branch $WALLABAG_VERSION --depth 1 https://github.com/wallabag/wallabag.git /var/www/wallabag
+# here it takes like 2 minutes
 
 COPY root /
 
