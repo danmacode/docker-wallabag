@@ -1,3 +1,9 @@
+# Use
+
+`docker run --name myWallabag -p 192.168.1.10:8080:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.10:8080 -e SYMFONY__ENV__DATABASE_CHARSET=utf8mb4 -e SYMFONY__ENV__FOSUSER_REGISTRATION=false -v /opt/wallabag/images:/var/www/wallabag/web/assets/images dmzmadrid/docker-wallabag:latest`
+
+
+
 # What is wallabag?
 
 [![Build Status](https://travis-ci.org/wallabag/docker.svg?branch=master)](https://travis-ci.org/wallabag/docker)
