@@ -1,6 +1,7 @@
 FROM arm32v7/alpine:latest
 
-RUN [ “cross-build-start” ]
+# Not necessary; build the dockerfile in a raspi 3B+
+# RUN [ “cross-build-start” ]
 
 ARG WALLABAG_VERSION=2.3.8
 #                                                                                             /community/armv7/ not necessary
@@ -69,4 +70,4 @@ RUN set -ex \
 EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["wallabag"]
-RUN [ “cross-build-end” ]
+# RUN [ “cross-build-end” ]
