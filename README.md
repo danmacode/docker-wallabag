@@ -1,6 +1,6 @@
 # Use
 - `-v, --volume=[host-src:]container-dest[:<options>]: Bind mount a volume.`
-`docker run --name myWallabag -p 192.168.1.10:8080:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.10:8080 -e SYMFONY__ENV__DATABASE_CHARSET=utf8mb4 -e SYMFONY__ENV__FOSUSER_REGISTRATION=false -v /opt/wallabag/images:/var/www/wallabag/web/assets/images dmzmadrid/docker-wallabag:latest`
+- `docker run --name myWallabag -p 192.168.1.10:8080:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.10:8080 -e SYMFONY__ENV__DATABASE_CHARSET=utf8mb4 -e SYMFONY__ENV__FOSUSER_REGISTRATION=false -v /opt/wallabag/images:/var/www/wallabag/web/assets/images dmzmadrid/docker-wallabag:latest`
 
 
 
